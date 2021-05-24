@@ -65,8 +65,8 @@ jobs:
             # Выполняет pull образа с DockerHub
             sudo docker pull whiteheron819/infra_actions
             #остановка всех контейнеров
-            sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 whiteheron819/
+            sudo docker stop my_container
+            sudo docker run --rm -d -p 5000:5000 whiteheron819/infra_actions
 
   send_message:
     runs-on: ubuntu-latest
